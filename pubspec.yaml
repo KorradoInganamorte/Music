@@ -1,5 +1,5 @@
 name: music
-description: "A new Flutter project."
+description: "KI application"
 publish_to: 'none'
 version: 0.1.0
 
@@ -18,7 +18,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-fonts:
-  - family: Roboto
-    fonts:
-      - asset: fonts/Roboto-Regular.ttf
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+    - family:  AssetsIcon
+      fonts:
+       - asset: assets/fonts/AssetsIcon.ttf
