@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music/components/card.dart';
 import 'package:music/components/header.dart';
 
 class Home extends StatelessWidget {
@@ -12,7 +13,12 @@ class Home extends StatelessWidget {
         child: Header(),
       ),
       body: Container(
-        color: const Color(0xFF0F0F0F),
+        padding: const EdgeInsets.symmetric(horizontal: 14),
+        child: const Row(
+          children: [
+            CardMusic(),
+          ]
+        )
       ),
     );
   }

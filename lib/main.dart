@@ -13,7 +13,7 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: const Color(0xFF0F0F0F),
+        scaffoldBackgroundColor: const Color(0xFF0F0F0F),
         fontFamily: "Roboto"
       ),
       home: const Home(),

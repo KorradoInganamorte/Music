@@ -11,17 +11,17 @@ class Header extends StatelessWidget {
       backgroundColor: const Color(0xFF0F0F0F),
 
       title: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
 
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
           children: [
             const Padding(
-              padding: EdgeInsets.only(right: 26.0),
+              padding: EdgeInsets.only(right: 26),
               child: Text(
                 "KI",
-                style: TextStyle(color: Colors.white, fontSize: 28.0),
+                style: TextStyle(color: Colors.white, fontSize: 28),
               )
             ),
 
@@ -30,8 +30,8 @@ class Header extends StatelessWidget {
                 height: 32,
                 child: TextField(
                   cursorColor: Colors.white,
-                  cursorHeight: 21.0,
-                  cursorWidth: 1.0,
+                  cursorHeight: 21,
+                  cursorWidth: 1,
 
                   decoration: InputDecoration(
                     alignLabelWithHint: true,
@@ -39,18 +39,18 @@ class Header extends StatelessWidget {
                     fillColor: const Color(0xFF2B2B2B),
                     filled: true,
 
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 9.0),
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 9),
 
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
-                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
-                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
 
                     hintText: "Искать",
-                    hintStyle: const TextStyle(color: Color(0xFFFFFFFF), fontSize: 14.0),
+                    hintStyle: const TextStyle(color: Color(0xFFFFFFFF), fontSize: 14),
                     suffixIcon: const Icon(AssetsIcon.search, size: 16,color: Colors.white,),
                   ),
                   
-                  style: const TextStyle(color: Colors.white, height: 1.5, fontSize: 14.0),
+                  style: const TextStyle(color: Colors.white, height: 1.5, fontSize: 14),
                 ),
               ),
             )
