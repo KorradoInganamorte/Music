@@ -9,36 +9,60 @@ class MainItemMusic extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
 
       children: [
+        Container(
+        width: MediaQuery.of(context).size.width,
+        height: 32,
+        decoration: const BoxDecoration(
+          color: Color(0xFF000000),
+          gradient: LinearGradient( 
+            begin: Alignment.topCenter, 
+            end: Alignment.bottomCenter, 
+            colors: [ 
+              Color(0xFF0F0F0F), 
+              Color(0xFF000000), 
+            ], 
+          ), 
+        ),
+      ),
         Image(
           image: const AssetImage("assets/images/2.0x/test_card-image.jpg"),
           width: MediaQuery.of(context).size.width,
           fit: BoxFit.cover,
         ),
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 14),
+          padding: const EdgeInsets.fromLTRB(14, 16, 14, 12),
 
-          child: const Padding(
-            padding: EdgeInsets.fromLTRB(0, 16, 0, 12), 
+          width: MediaQuery.of(context).size.width,
+          decoration: const BoxDecoration(
+            color: Color(0xFF000000),
+            gradient: LinearGradient( 
+              begin: Alignment.topCenter, 
+              end: Alignment.bottomCenter, 
+              colors: [  
+                Color(0xFF000000),
+                Color(0xFF0F0F0F),
+              ], 
+            ), 
+          ),
 
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
 
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(bottom: 4), 
+            children: [
+              Padding(
+                padding: EdgeInsets.only(bottom: 4), 
 
-                  child: Text(
-                    "Initial D - All around",
-                    style: TextStyle(color: Color(0xFFFFFFFF), fontSize: 18),
-                  )
-                ),
-                Text(
-                  "Настроение - Eurobeat",
-                  style: TextStyle(color: Color(0xFF727272), fontSize: 14)
+                child: Text(
+                  "Initial D - All around",
+                  style: TextStyle(color: Color(0xFFFFFFFF), fontSize: 18),
                 )
-              ],
-            ),
-          )
+              ),
+              Text(
+                "Настроение - Eurobeat",
+                style: TextStyle(color: Color(0xFF727272), fontSize: 14)
+              )
+            ],
+          ),
         ),
       ],
     );
