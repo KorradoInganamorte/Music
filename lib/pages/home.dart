@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music/components/card.dart';
-import 'package:music/components/header.dart';
+
+import 'package:music/widgets/card/card.dart';
+import 'package:music/widgets/header.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -14,11 +15,7 @@ class Home extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14),
-        child: const Row(
-          children: [
-            CardMusic(),
-          ]
-        )
+        child: const CardMusic()
       ),
     );
   }

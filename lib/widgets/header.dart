@@ -11,7 +11,7 @@ class Header extends StatelessWidget {
       backgroundColor: const Color(0xFF0F0F0F),
 
       title: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 4),
 
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -30,10 +30,11 @@ class Header extends StatelessWidget {
                 height: 32,
                 child: TextField(
                   cursorColor: Colors.white,
-                  cursorHeight: 21,
+                  cursorHeight: 14,
                   cursorWidth: 1,
 
                   decoration: InputDecoration(
+                    
                     alignLabelWithHint: true,
 
                     fillColor: const Color(0xFF2B2B2B),
@@ -50,7 +51,7 @@ class Header extends StatelessWidget {
                     suffixIcon: const Icon(AssetsIcon.search, size: 16,color: Colors.white,),
                   ),
                   
-                  style: const TextStyle(color: Colors.white, height: 1.5, fontSize: 14),
+                  style: const TextStyle(color: Colors.white, height: 1, fontSize: 14),
                 ),
               ),
             )

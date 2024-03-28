@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:music/pages/home.dart';
+import 'package:music/pages/about.dart';
+// import 'package:music/pages/home.dart';
 
 void main() {
   runApp(const Main());
@@ -14,9 +15,12 @@ class Main extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFF0F0F0F),
-        fontFamily: "Roboto"
-      ),
-      home: const Home(),
+        fontFamily: "Roboto"),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const About(),
+        // "/about": (context) => const About()
+      },
     );
   }
 }
