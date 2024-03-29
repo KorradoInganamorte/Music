@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:music/widgets/music/components/audioplayer.dart';
 
-class MainItemMusic extends StatelessWidget {
-  const MainItemMusic({super.key});
+class MainMusicItem extends StatelessWidget {
+  const MainMusicItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,24 +11,29 @@ class MainItemMusic extends StatelessWidget {
 
       children: [
         Container(
-        width: MediaQuery.of(context).size.width,
-        height: 32,
-        decoration: const BoxDecoration(
-          color: Color(0xFF000000),
-          gradient: LinearGradient( 
-            begin: Alignment.topCenter, 
-            end: Alignment.bottomCenter, 
-            colors: [ 
-              Color(0xFF0F0F0F), 
-              Color(0xFF000000), 
-            ], 
-          ), 
-        ),
-      ),
-        Image(
-          image: const AssetImage("assets/images/2.0x/test_card-image.jpg"),
           width: MediaQuery.of(context).size.width,
-          fit: BoxFit.cover,
+          height: 32,
+          decoration: const BoxDecoration(
+            color: Color(0xFF000000),
+            gradient: LinearGradient( 
+              begin: Alignment.topCenter, 
+              end: Alignment.bottomCenter, 
+              colors: [ 
+                Color(0xFF0F0F0F), 
+                Color(0xFF000000), 
+              ], 
+            ), 
+          ),
+        ),
+        Stack(
+          children: [
+            Image(
+              image: const AssetImage("assets/images/2.0x/test_card-image.jpg"),
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.cover
+            ),
+            const MusicPlayer(),
+          ],
         ),
         Container(
           padding: const EdgeInsets.fromLTRB(14, 16, 14, 12),

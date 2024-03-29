@@ -12,7 +12,7 @@ class CardItemMusic extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: const Image(
-            image: AssetImage("assets/images/3.0x/test_card-image.sy.jpg"),
+            image: AssetImage("assets/images/2.0x/test_card-image.sy.jpg"),
             width: 140,
             height: 140,
           ),
