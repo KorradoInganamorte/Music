@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:music/widgets/music/components/audioplayer.dart';
 
 class MainMusicItem extends StatelessWidget {
   const MainMusicItem({super.key});
@@ -25,16 +24,16 @@ class MainMusicItem extends StatelessWidget {
             ), 
           ),
         ),
-        Stack(
-          children: [
-            Image(
-              image: const AssetImage("assets/images/2.0x/test_card-image.jpg"),
-              width: MediaQuery.of(context).size.width,
-              fit: BoxFit.cover
-            ),
-            const MusicPlayer(),
-          ],
-        ),
+        // Stack(
+        //   children: [
+        //     Image(
+        //       image: const AssetImage("assets/images/2.0x/test_card-image.jpg"),
+        //       width: MediaQuery.of(context).size.width,
+        //       fit: BoxFit.cover
+        //     ),
+        //     const MusicPlayer(),
+        //   ],
+        // ),
         Container(
           padding: const EdgeInsets.fromLTRB(14, 16, 14, 12),
 

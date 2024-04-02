@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:music/widgets/music/components/main.dart';
-import 'package:music/widgets/music/components/other_music.dart';
+// import 'package:music/widgets/music/components/main.dart';
+// import 'package:music/widgets/music/components/other_music.dart';
 
 class Music extends StatelessWidget {
   const Music({super.key});
@@ -11,8 +11,8 @@ class Music extends StatelessWidget {
     
     return const Column(
       children: [
-        MainMusicItem(),
-        OtherMusicItem()
+        // MainMusicItem(),
+        // OtherMusicItem()
       ],
     );
   }

@@ -37,10 +37,10 @@ class Header extends StatelessWidget {
                     
                     alignLabelWithHint: true,
 
-                    fillColor: const Color(0xFF2B2B2B),
+                    fillColor: const Color(0xFF434343),
                     filled: true,
 
-                    contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 9),
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 6),
 
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
                     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
@@ -48,7 +48,7 @@ class Header extends StatelessWidget {
 
                     hintText: "Искать",
                     hintStyle: const TextStyle(color: Color(0xFFFFFFFF), fontSize: 14),
-                    suffixIcon: const Icon(AssetsIcon.search, size: 16,color: Colors.white,),
+                    suffixIcon: const Icon(AssetsIcon.search, size: 16,color: Colors.white),
                   ),
                   
                   style: const TextStyle(color: Colors.white, height: 1, fontSize: 14),

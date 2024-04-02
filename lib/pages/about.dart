@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:music/widgets/audioplayer/audioplayer.dart';
 
 import 'package:music/widgets/header.dart';
-import 'package:music/widgets/music/music.dart';
 
 class About extends StatelessWidget {
   const About({super.key});
@@ -13,7 +13,7 @@ class About extends StatelessWidget {
         preferredSize: Size.fromHeight(kToolbarHeight),
         child: Header(),
       ),
-      body: Music(),
+      body: MusicPlayer()
     );
   }
 }
