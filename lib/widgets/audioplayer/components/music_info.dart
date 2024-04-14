@@ -6,7 +6,7 @@ class MusicInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(bottom: 32),
+      padding: EdgeInsets.only(bottom: 12),
 
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

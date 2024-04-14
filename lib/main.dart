@@ -7,7 +7,7 @@ import 'package:music/pages/about.dart';
 void main() {
   runApp(const Main());
 
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 }
 
 class Main extends StatelessWidget {
@@ -16,6 +16,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFF0F0F0F),
         fontFamily: "Roboto",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music/widgets/audioplayer/audioplayer.dart';
 
+import 'package:music/widgets/audioplayer/audioplayer.dart';
+// import 'package:music/widgets/footer.dart';
 import 'package:music/widgets/header.dart';
 
 class About extends StatelessWidget {
@@ -13,7 +14,8 @@ class About extends StatelessWidget {
         preferredSize: Size.fromHeight(kToolbarHeight),
         child: Header(),
       ),
-      body: MusicPlayer()
+      body: MusicPlayer(),
+      // bottomNavigationBar: Footer(),
     );
   }
 }

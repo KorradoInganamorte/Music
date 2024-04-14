@@ -9,6 +9,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: const Color(0xFF0F0F0F),
+      surfaceTintColor: const Color(0xFF0F0F0F),
 
       title: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4),

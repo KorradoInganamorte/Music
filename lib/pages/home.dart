@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:music/widgets/card/card.dart';
+// import 'package:music/widgets/footer.dart';
 import 'package:music/widgets/header.dart';
 
 class Home extends StatelessWidget {
@@ -17,6 +18,7 @@ class Home extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 14),
         child: const CardMusic()
       ),
+      // bottomNavigationBar: const Footer()
     );
   }
 }

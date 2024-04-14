@@ -84,7 +84,7 @@ class _MusicControlsState extends State<MusicControls> {
   Widget build(BuildContext context) {
     return Column(children: [
       Padding(
-        padding: const EdgeInsets.only(bottom: 32),
+        padding: const EdgeInsets.only(bottom: 16),
 
         // timeLine
         child: Column(
