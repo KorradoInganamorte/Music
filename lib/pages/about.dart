@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:music/widgets/audioplayer/audioplayer.dart';
-// import 'package:music/widgets/footer.dart';
+import 'package:music/widgets/footer.dart';
 import 'package:music/widgets/header.dart';
 
 class About extends StatelessWidget {
@@ -15,7 +15,7 @@ class About extends StatelessWidget {
         child: Header(),
       ),
       body: MusicPlayer(),
-      // bottomNavigationBar: Footer(),
+      bottomNavigationBar: Footer(),
     );
   }
 }

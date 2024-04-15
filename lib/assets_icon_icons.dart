@@ -12,4 +12,5 @@ class AssetsIcon {
   static const IconData search = IconData(0xe903, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData pause = IconData(0xe904, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData play = IconData(0xe905, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData home = IconData(0xe906, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

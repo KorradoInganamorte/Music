@@ -24,7 +24,7 @@ class Main extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => const About(),
-        // "/about": (context) => const About()
+        "/about": (context) => const About()
       },
     );
   }
