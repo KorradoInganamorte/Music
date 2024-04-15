@@ -47,7 +47,7 @@ class Header extends StatelessWidget {
                     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                     focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
 
-                    hintText: "Искать",
+                    hintText: "Search",
                     hintStyle: const TextStyle(color: Color(0xFFFFFFFF), fontSize: 14),
                     suffixIcon: const Icon(AssetsIcon.search, size: 16,color: Colors.white),
                   ),

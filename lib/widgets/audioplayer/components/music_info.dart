@@ -21,7 +21,7 @@ class MusicInfo extends StatelessWidget {
             )
           ),
           Text(
-            "Настроение - Eurobeat",
+            "Mood - Eurobeat",
             style: TextStyle(color: Color(0xFF727272), fontSize: 14)
           )
         ],

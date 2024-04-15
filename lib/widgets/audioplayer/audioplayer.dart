@@ -45,49 +45,54 @@ class _MusicPlayerState extends State<MusicPlayer> {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+
         children: [
           Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Color(0xFF0F0F0F),
-                    Color(0xFF000000),
-                  ],
-                ),
-              ),
-              child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(5),
-                    child: Image(
-                        image: const AssetImage(
-                            "assets/images/2.0x/test-image.jpg"),
-                        width: MediaQuery.of(context).size.width,
-                        fit: BoxFit.fill),
-                  ))),
-          Container(
-              padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
-              width: MediaQuery.of(context).size.width,
-              decoration: const BoxDecoration(
-                color: Color(0xFF000000),
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Color(0xFF000000),
-                    Color(0xFF0F0F0F),
-                  ],
-                ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const MusicInfo(),
-                  MusicControls(player: player),
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xFF0F0F0F),
+                  Color(0xFF000000),
                 ],
-              )),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(5),
+                child: Image(
+                  image: const AssetImage("assets/images/2.0x/test-image.jpg"),
+                  width: MediaQuery.of(context).size.width,
+                  fit: BoxFit.fill
+                ),
+              )
+            )
+          ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
+            width: MediaQuery.of(context).size.width,
+            decoration: const BoxDecoration(
+              color: Color(0xFF000000),
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xFF000000),
+                  Color(0xFF0F0F0F),
+                ],
+              ),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+
+              children: [
+                const MusicInfo(),
+                MusicControls(player: player),
+              ],
+            )
+          ),
         ],
       ),
     );

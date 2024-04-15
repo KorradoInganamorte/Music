@@ -13,6 +13,7 @@ class Footer extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
+
           children: [
             ElevatedButton(
                 onPressed: () {},
@@ -27,16 +28,15 @@ class Footer extends StatelessWidget {
                 child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
+
                   children: [
                     Icon(
                       AssetsIcon.home,
                       size: 20,
                       color: Color(0xFFFFFFFF),
                     ),
-                    SizedBox(height: 6),
-                    Text("Главная",
-                        style:
-                            TextStyle(fontSize: 12, color: Color(0xFFFFFFFF))),
+                    SizedBox(height: 8),
+                    Text("Home", style: TextStyle(fontSize: 12, color: Color(0xFFFFFFFF), height: 1)),
                   ],
                 )),
           ],
