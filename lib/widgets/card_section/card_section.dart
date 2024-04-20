@@ -22,9 +22,22 @@ class CardSectionMusic extends StatelessWidget {
           padding: EdgeInsets.fromLTRB(0, 6, 0, 14),
           child: Text("Music (音楽)", style: TextStyle(color: Color(0xFFA5A5A5), fontSize: 20, height: 1.0))
         ),
-        InkWell(
-          child: CardItemMusic(title: title, author: author, imageSrc: imageSrc, audioSrc: audioSrc),
-          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => About(title: title, author: author, imageSrc: imageSrc, audioSrc: audioSrc))),
+        Material(
+          color: Colors.transparent,
+
+          child: InkWell(
+            highlightColor: const Color(0xFF181818),
+            hoverColor: const Color(0xFF181818),
+            hoverDuration: Durations.medium1,
+
+            borderRadius: BorderRadius.circular(5),
+
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(6, 4, 6, 10),
+              child: CardItemMusic(title: title, author: author, imageSrc: imageSrc, audioSrc: audioSrc),
+            ),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => About(title: title, author: author, imageSrc: imageSrc, audioSrc: audioSrc))),
+          ),
         )
       ],
     );
