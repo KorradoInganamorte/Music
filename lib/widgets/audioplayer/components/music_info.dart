@@ -30,7 +30,7 @@ class _MusicInfoState extends State<MusicInfo> {
           ),
           Text(
             widget.author,
-            style: const TextStyle(color: Color(0xFF727272), fontSize: 14)
+            style: const TextStyle(color: Color(0xFF727272), fontSize: 16)
           )
         ],
       ),

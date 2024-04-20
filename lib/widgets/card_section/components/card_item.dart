@@ -34,7 +34,7 @@ class _CardItemMusicState extends State<CardItemMusic> {
 
           children: [
             Text(widget.title, style: const TextStyle(color: Color(0xFFFFFFFF), fontSize: 18, height: 1)),
-            const SizedBox(height: 6),
+            const SizedBox(height: 4),
             Text(widget.author, style: const TextStyle(color: Color(0xFF626262), fontSize: 16, height: 1))
           ]
         )
