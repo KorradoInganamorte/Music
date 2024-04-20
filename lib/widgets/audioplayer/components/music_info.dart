@@ -1,28 +1,36 @@
 import 'package:flutter/material.dart';
 
-class MusicInfo extends StatelessWidget {
-  const MusicInfo({super.key});
+class MusicInfo extends StatefulWidget {
+  final String title;
+  final String author;
+
+  const MusicInfo({super.key, required this.title, required this.author});
 
   @override
+  State<MusicInfo> createState() => _MusicInfoState();
+}
+
+class _MusicInfoState extends State<MusicInfo> {
+  @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(bottom: 12),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
 
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
 
         children: [
           Padding(
-            padding: EdgeInsets.only(bottom: 0), 
+            padding: const EdgeInsets.only(bottom: 0), 
 
             child: Text(
-              "Initial D - All around",
-              style: TextStyle(color: Color(0xFFFFFFFF), fontSize: 20),
+              widget.title,
+              style: const TextStyle(color: Color(0xFFFFFFFF), fontSize: 20),
             )
           ),
           Text(
-            "Mood - Eurobeat",
-            style: TextStyle(color: Color(0xFF727272), fontSize: 14)
+            widget.author,
+            style: const TextStyle(color: Color(0xFF727272), fontSize: 14)
           )
         ],
       ),

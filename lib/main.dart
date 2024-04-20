@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:music/pages/about.dart';
 import 'package:music/pages/home.dart';
 
 void main() {
@@ -24,7 +23,6 @@ class Main extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => const Home(),
-        "/about": (context) => const About()
       },
     );
   }

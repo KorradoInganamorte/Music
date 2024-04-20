@@ -87,52 +87,53 @@ class _MusicControlsState extends State<MusicControls> {
         padding: const EdgeInsets.only(bottom: 16),
 
         // timeLine
-        child: Column(
-          children: [
-            Padding(
+        child: Material(
+          color: Colors.transparent,
+          child: Column(
+            children: [
+              Padding(
                 padding: const EdgeInsets.only(bottom: 0),
+
                 child: SliderTheme(
-                    data: SliderThemeData(
-                        trackHeight: 2,
-                        trackShape: const RectangularSliderTrackShape(),
-                        overlayShape: SliderComponentShape.noOverlay,
-                        activeTrackColor: const Color(0xFFFFFFFF),
-                        inactiveTrackColor: const Color(0xFF5F5F5F),
-                        thumbShape:
-                            const RoundSliderThumbShape(enabledThumbRadius: 7),
-                        thumbColor: const Color(0xFF5F5F5F)),
-                    child: Slider(
-                        value: (position != null &&
-                                duration != null &&
-                                position!.inMilliseconds > 0 &&
-                                position!.inMilliseconds <
-                                    duration!.inMilliseconds)
-                            ? position!.inMilliseconds /
-                                duration!.inMilliseconds
-                            : 0,
-                        onChanged: (value) {
-                          final newDuration = duration;
-                          if (newDuration == null) {
-                            return;
-                          }
-                          final position = value * newDuration.inMilliseconds;
-                          player.seek(Duration(milliseconds: position.round()));
-                        }))),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 7),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(positionText,
-                      style: const TextStyle(
-                          color: Color(0xFFFFFFFF), fontSize: 14)),
-                  Text(durationText,
-                      style: const TextStyle(
-                          color: Color(0xFFFFFFFF), fontSize: 14))
-                ],
+                  data: SliderThemeData(
+                    trackHeight: 2,
+                    trackShape: const RectangularSliderTrackShape(),
+                    overlayShape: SliderComponentShape.noOverlay,
+                    activeTrackColor: const Color(0xFFFFFFFF),
+                    inactiveTrackColor: const Color(0xFF5F5F5F),
+                    thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 7),
+                    thumbColor: const Color(0xFF5F5F5F)
+                  ),
+                  child: Slider(
+                    value: (position != null &&
+                            duration != null &&
+                            position!.inMilliseconds > 0 && position!.inMilliseconds < duration!.inMilliseconds
+                            ) ? position!.inMilliseconds / duration!.inMilliseconds : 0,
+                    onChanged: (value) {
+                      final newDuration = duration;
+
+                      if (newDuration == null) {
+                        return;
+                      }
+
+                      final position = value * newDuration.inMilliseconds;
+                      player.seek(Duration(milliseconds: position.round()));
+                    }
+                  )
+                )
               ),
-            )
-          ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 7),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(positionText, style: const TextStyle(color: Color(0xFFFFFFFF), fontSize: 14)),
+                    Text(durationText, style: const TextStyle(color: Color(0xFFFFFFFF), fontSize: 14))
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
 

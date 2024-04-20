@@ -6,7 +6,12 @@ import 'package:music/widgets/audioplayer/components/music_info.dart';
 import 'package:music/widgets/audioplayer/components/music_controls.dart';
 
 class MusicPlayer extends StatefulWidget {
-  const MusicPlayer({super.key});
+  final String title;
+  final String author;
+  final String imageSrc;
+  final String audioSrc;
+
+  const MusicPlayer({super.key, required this.title, required this.author, required this.imageSrc, required this.audioSrc});
 
   @override
   State<MusicPlayer> createState() => _MusicPlayerState();
@@ -27,8 +32,8 @@ class _MusicPlayerState extends State<MusicPlayer> {
 
     // Start the player as soon as the app is displayed.
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await player.setSource(AssetSource('audio/Initial D - All Around.mp3'));
-      // await player.resume();
+      await player.setSource(AssetSource('audio/${widget.audioSrc}'));
+      await player.resume();
     });
   }
 
@@ -63,7 +68,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(5),
                 child: Image(
-                  image: const AssetImage("assets/images/2.0x/test-image.jpg"),
+                  image: AssetImage("assets/images/${widget.imageSrc}"),
                   width: MediaQuery.of(context).size.width,
                   fit: BoxFit.fill
                 ),
@@ -88,7 +93,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
               crossAxisAlignment: CrossAxisAlignment.start,
 
               children: [
-                const MusicInfo(),
+                MusicInfo(title: widget.title, author: widget.author),
                 MusicControls(player: player),
               ],
             )

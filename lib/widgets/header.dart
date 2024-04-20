@@ -11,6 +11,8 @@ class Header extends StatelessWidget {
       backgroundColor: const Color(0xFF0F0F0F),
       surfaceTintColor: const Color(0xFF0F0F0F),
 
+      automaticallyImplyLeading: false,
+
       title: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4),
 
