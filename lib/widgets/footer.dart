@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music/assets_icon_icons.dart';
+import 'package:music/pages/home.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});
@@ -16,7 +17,12 @@ class Footer extends StatelessWidget {
 
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(
+                  context,
+                  // MaterialPageRoute(builder: (context) => const Home()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF0F0F0F),
                 foregroundColor: const Color(0xFF757575),
