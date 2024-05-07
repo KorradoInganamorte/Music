@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music/assets_icon_icons.dart';
-import 'package:music/pages/home.dart';
+// import 'package:music/pages/home.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});

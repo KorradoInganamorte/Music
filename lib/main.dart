@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:music/pages/home.dart';
+import 'package:music/pages/splash_screen.dart';
 
 void main() {
   runApp(const Main());
@@ -22,7 +22,7 @@ class Main extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => const Home(),
+        "/": (context) => const SplashScreen(),
       },
     );
   }

@@ -14,13 +14,28 @@ class CardSectionMusic extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // List array = [
+    //   {
+    //     title: "Initial D - All around",
+    //     author: "Lia",
+    //     imageSrc: "2.0x/test-image.jpg",
+    //     audioSrc: "Initial D - All Around.mp3"
+    //   },
+    //   {
+    //     title: "Initial D - When the sun goes down",
+    //     author: "Ken Blast",
+    //     imageSrc: "2.0x/test-image.jpg",
+    //     audioSrc: "Initial D - When The Sun Goes Down.mp3"
+    //   }
+    // ];
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
 
       children: [
         const Padding(
           padding: EdgeInsets.fromLTRB(0, 6, 0, 14),
-          child: Text("Music (音楽)", style: TextStyle(color: Color(0xFFA5A5A5), fontSize: 20, height: 1.0))
+          child: Text("Music", style: TextStyle(color: Color(0xFFA5A5A5), fontSize: 20, height: 1.0))
         ),
         Material(
           color: Colors.transparent,
@@ -32,11 +47,11 @@ class CardSectionMusic extends StatelessWidget {
 
             borderRadius: BorderRadius.circular(5),
 
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(6, 4, 6, 10),
-              child: CardItemMusic(title: title, author: author, imageSrc: imageSrc, audioSrc: audioSrc),
+            child: const Padding(
+              padding: EdgeInsets.fromLTRB(6, 4, 6, 10),
+              child: CardItemMusic(title: "Initial D - All around", author: "Lia", imageSrc: "2.0x/test-image.jpg", audioSrc: "Initial D - All Around.mp3"),
             ),
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => About(title: title, author: author, imageSrc: imageSrc, audioSrc: audioSrc))),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const About(title: "Initial D - All around", author: "Lia", imageSrc: "2.0x/test-image.jpg", audioSrc: "Initial D - All Around.mp3"))),
           ),
         )
       ],
